@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+
+  <meta name="description" content="ISSO评论系统折腾记录"/>
+
+
+
+
+  <meta name="keywords" content="isso, Linux, Python, 客星の明るい夜" />
+
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="客星の明るい夜">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.233" />
+
+
+
+<link rel="canonical" href="http://cocolate.cc/2018/02/24/ISSO评论系统折腾记录/"/>
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/nprogress/nprogress.min.css" />
+
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=0.233" />
+
+
+
+  
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76847546-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-76847546-1');
+</script>
+
+
+  <script id="baidu_push">
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.1.1/av-min.js"></script>
+  <script id="leancloud">
+    AV.init({
+      appId: "9IyBy335tHIBss3MlzNH1wVF-gzGzoHsz",
+      appKey: "6F595pNhGislnH1GuerDE9hj"
+    });
+  </script>
+
+
+
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+
+
+<script>
+  window.config = {"title":"客星の明るい夜","subtitle":null,"description":null,"author":"cocolate","language":null,"timezone":null,"url":"http://cocolate.cc","root":"/","permalink":":year/:month/:day/:title/","permalink_defaults":null,"source_dir":"source","public_dir":"public","tag_dir":"tags","archive_dir":"archives","category_dir":"categories","code_dir":"downloads/code","i18n_dir":":lang","skip_render":"resume/**","new_post_name":":title.md","default_layout":"post","titlecase":false,"external_link":true,"filename_case":0,"render_drafts":false,"post_asset_folder":false,"relative_link":false,"future":true,"highlight":{"enable":true,"auto_detect":false,"line_number":true,"tab_replace":null,"first_line_number":"always1"},"default_category":"uncategorized","category_map":null,"tag_map":null,"date_format":"YYYY-MM-DD","time_format":"HH:mm:ss","per_page":10,"pagination_dir":"page","theme":"sanae","deploy":[{"type":"git","repo":"https://github.com/oodavy41/oodavy41.github.io"},{"type":"git","repo":"https://coding.net/u/cocolate/p/cocolate.coding.me"}],"ignore":[],"index_generator":{"per_page":10,"order_by":"-date","path":""},"plugins":null,"markdown_it_plus":{"highlight":true,"html":true,"xhtmlOut":true,"breaks":true,"langPrefix":null,"linkify":true,"typographer":null,"quotes":"“”‘’","pre_class":"highlight","plugins":[]},"feed":{"type":"atom","limit":20,"hub":"","content":true,"content_limit":140,"content_limit_delim":"","path":"atom.xml"},"category_generator":{"per_page":10},"archive_generator":{"per_page":10,"yearly":true,"monthly":true,"daily":false},"tag_generator":{"per_page":10},"sitemap":{"path":"sitemap.xml"},"server":{"port":4000,"log":false,"compress":false,"header":true},"since":2007,"favicon":"/favicon.ico","rss":"default","menu":{"Home":"/","Archives":"/archives/","Tags":"/tags","About":"/about"},"mode":"default","toc":true,"fancybox":true,"katex":true,"pjax":true,"copyright":{"enable":true,"license":"<a rel=\"license\" href=\"http://creativecommons.org/licenses/by-nc/4.0/\" target=\"_blank\">CC BY-NC 4.0</a>"},"reward":{"enable":false,"qrCode":{"wechat":null,"alipay":null}},"social":{"email":"c@cocolate.cc","stack-overflow":null,"twitter":null,"facebook":null,"linkedin":null,"google":null,"github":"https://github.com/oodavy41","weibo":"https://weibo.com/3043644997","zhihu":null,"douban":null,"pocket":null,"tumblr":null,"instagram":null,"bilibili":null,"bangumi":"https://bgm.tv/user/cocolate"},"leancloud":{"app_id":"9IyBy335tHIBss3MlzNH1wVF-gzGzoHsz","app_key":"6F595pNhGislnH1GuerDE9hj"},"baidu_analytics":null,"baidu_verification":null,"google_analytics":"UA-76847546-1","google_verification":null,"disqus_shortname":null,"changyan":{"appid":null,"appkey":null},"livere_datauid":null,"isso":{"address":null},"valine":{"app_id":"e93n5HhEEEjOQnErokxDjoQj-gzGzoHsz","app_key":"5aF6AzpVBq9bBVksDGgWJs1N"},"company":"诹访大社","version":0.233};
+</script>
+
+    <title> ISSO评论系统折腾记录 - 客星の明るい夜 </title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </head>
+
+  <body><div id="mobile-navbar" class="mobile-navbar">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="mobile-header-logo">
+    <a href="/." class="logo">客星の明るい夜</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    
+      <a href="/">
+        <li class="mobile-menu-item">
+          
+          
+            Home
+          
+        </li>
+      </a>
+    
+      <a href="/archives/">
+        <li class="mobile-menu-item">
+          
+          
+            Archives
+          
+        </li>
+      </a>
+    
+      <a href="/tags">
+        <li class="mobile-menu-item">
+          
+          
+            Tags
+          
+        </li>
+      </a>
+    
+      <a href="/about">
+        <li class="mobile-menu-item">
+          
+          
+            About
+          
+        </li>
+      </a>
+    
+  </ul>
+</nav>
+
+    <div class="container" id="mobile-panel">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">客星の明るい夜</a>
+  <canvas class="star"></canvas>
+</div>
+
+<nav class="site-navbar">
+  
+    <ul id="menu" class="menu">
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            
+            
+              Home
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            
+            
+              Archives
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/tags">
+            
+            
+              Tags
+            
+          </a>
+        </li>
+      
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            
+            
+              About
+            
+          </a>
+        </li>
+      
+    </ul>
+  
+</nav>
+
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          ISSO评论系统折腾记录
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          2018-02-24
+        </span>
+        
+        
+        <span class="post-visits"
+             data-url="/2018/02/24/ISSO评论系统折腾记录/"
+             data-title="ISSO评论系统折腾记录">
+          阅读次数 0
+        </span>
+        
+      </div>
+    </header>
+
+    
+    
+  <div class="post-toc" id="post-toc">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#折腾记录"><span class="toc-text"> 折腾记录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#尾声"><span class="toc-text"> 尾声</span></a></li></ol>
+    </div>
+  </div>
+
+
+
+    <div class="post-content">
+      
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"><p>在过去的一年，许多评论系统相继扑街了。这个博客也没有评论系统裸奔了不少时间。<br>
+国内的服务商都苟延残喘，而外国的则难以触及。<br>
+在可见的未来由于政策与环境原因，国内想来是没什么能用的评论系统了，是时候着眼开源方案了。</p>
+<a id="more"></a>
+<p>现在较为成熟的方案有</p>
+<ul>
+<li><a href="https://github.com/imsun/gitment" target="_blank" rel="noopener">gitment</a> 基于github issue 系统与API</li>
+<li><a href="https://valine.js.org/quickstart.html" target="_blank" rel="noopener">Valine</a> 利用 learn cloud 的免费对象存储开发的方案</li>
+<li><a href="https://posativ.org/isso/" target="_blank" rel="noopener">ISSO</a> 小果然翁，传统后端方案，自给自足型</li>
+</ul>
+<p>其实对于不怎么折腾的人，第一个与第二个方案开箱即用体验很好。<br>
+但这两个方案都有致命的缺陷，由于依赖公共服务而必须在前端暴露 <code>apiKey</code>，这简直不能忍。<br>
+做个比喻的话，就像出门不锁门一样，叫人浑身难受。</p>
+<p>当然这两个方案可以通过自己架设代理处理请求来确保安全性，但这样就又变成了的后端方案。相比之下，当然是先从现成的轮子着手。</p>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p><a href="https://posativ.org/isso/docs/install/" target="_blank" rel="noopener">官网</a>提供了<code>pip</code>，可执行文件，和源码安装三种方案。<br>
+官网上的安装步骤比较详细，这里就不多赘述，准备好环境就好。当然，此外也有人整合了<a href="https://hub.docker.com/r/wonderfall/isso/" target="_blank" rel="noopener">docker方案</a>，开箱即用。</p>
+<p>当然如果仅仅是这样，这篇文章就不会诞生了。现有的ISSO版本为<code>0.10.6</code>,是16年释出的。诸如gravater头像、邮箱提醒、回复等都评论系统的主流功能都未实装。虽然在这两年里，有开发者完成了这些功能并提交给ISSO，但最新的master版本，不出意料并不能顺利运行。下一个release版本看上去也是遥遥无期，没办法，需要自己动手，丰衣足食了。</p>
+<h2 id="折腾记录"><a class="markdownIt-Anchor" href="#折腾记录"></a> 折腾记录</h2>
+<p>现在探查的时候，在网上发现了一个<a href="https://github.com/Hscpro/isso" target="_blank" rel="noopener">修改版本</a>，实现了gravatar头像功能，从他开始，再将emial功能的request并入代码。</p>
+<p>当然事情不会这么一帆风顺，在ISSO停更的时间里，他所用的markdown渲染器更新了，如果发生了下述报错，需要修改渲染方法的参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">File &quot;/home/pi/ISSO/isso/utils/html.py&quot;, line 70, in Markdown</span><br><span class="line">  md = misaka.Markdown(renderer, extensions=extensions)</span><br><span class="line">File &quot;misaka.pyx&quot;, line 194, in misaka.Markdown.__cinit__ (src/misaka.c:1481)</span><br><span class="line">  TypeError: an integer is required</span><br></pre></td></tr></table></figure>
+<p>需要将extensions的字符串参数改为常量参数</p>
+<figure class="highlight python"><figcaption><span>html.py:46</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Markdown</span><span class="params">(extensions=<span class="params">(<span class="string">"strikethrough"</span>, <span class="string">"superscript"</span>, <span class="string">"autolink"</span>,</span></span></span></span><br><span class="line"><span class="function"><span class="params"><span class="params">                         <span class="string">"fenced-code"</span>)</span>)</span>:</span></span><br><span class="line">    renderer = Unofficial()</span><br><span class="line">    md = misaka.Markdown(renderer, extensions=extensions)</span><br></pre></td></tr></table></figure>
+<p>to</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Markdown</span><span class="params">()</span>:</span></span><br><span class="line">    renderer = Unofficial()</span><br><span class="line">    md = misaka.Markdown(renderer, misaka.EXT_STRIKETHROUGH|misaka.EXT_SUPERSCRIPT|   misaka.EXT_AUTOLINK|misaka.EXT_FENCED_CODE)</span><br></pre></td></tr></table></figure>
+<p>ISSO使用SMTP邮件服务发送邮件，对于大多数的邮件服务供应商，都存在发信频率限制，当出现下述错误时，就要注意分离发信请求的时间间隔了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">File &quot;/home/pi/ISSO/isso/ext/notifications.py&quot;, line 84, in __enter__</span><br><span class="line">  v = self._sslobj.read(len, buffer)</span><br><span class="line">socket.timeout: The read operation timed out</span><br></pre></td></tr></table></figure>
+<p>ISSO本身并没有为短时间多次发生邮件设计，这里需要将邮件提醒模块改为队列形式</p>
+<figure class="highlight python"><figcaption><span>notifications.py 178</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">_retry</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">while</span> (<span class="keyword">not</span> self.mailQ.empty()):</span><br><span class="line">        mail = self.mailQ.get()</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">5</span>):</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                elf._sendmail(mail[<span class="number">0</span>], mail[<span class="number">1</span>], mail[<span class="number">2</span>])</span><br><span class="line">                time.sleep(<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">except</span> smtplib.SMTPConnectError:</span><br><span class="line">                time.sleep(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
+<p>第一次有了自己的博客，第一次搭了自己的评论系统，可是。。ISSO的邮件提醒还是简陋的文字版<br>
+为了视觉的统一性，这里加入了邮件模板，并修改了邮件生成机制</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">format</span><span class="params">(self, thread, comment, admin=False)</span>:</span></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">safesub</span><span class="params">(dict)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">__missing__</span><span class="params">(self, key)</span>:</span></span><br><span class="line">            <span class="keyword">return</span> <span class="string">'&#123;'</span> + key + <span class="string">'&#125;'</span></span><br><span class="line">    <span class="comment"># admin: url title comments author ipaddr delete</span></span><br><span class="line">    <span class="comment"># reply: url title comments author</span></span><br><span class="line">    author = comment[<span class="string">"author"</span>] <span class="keyword">or</span> <span class="string">"Anonymous"</span></span><br><span class="line">    <span class="keyword">if</span> comment[<span class="string">"author"</span>] <span class="keyword">and</span> comment[<span class="string">"website"</span>]:</span><br><span class="line">        author = <span class="string">"&lt;a href=\"%s\"&gt;%s&lt;/a&gt;"</span> % (comment[<span class="string">"website"</span>],</span><br><span class="line">                                            comment[<span class="string">"author"</span>])</span><br><span class="line">    <span class="keyword">if</span> comment[<span class="string">"email"</span>]:</span><br><span class="line">        author += <span class="string">" &lt;%s&gt;"</span> % comment[<span class="string">"email"</span>]</span><br><span class="line"></span><br><span class="line">    comments = comment[<span class="string">"text"</span>]</span><br><span class="line">    title = unquote(thread[<span class="string">"uri"</span>], encoding=<span class="string">'utf-8'</span>, errors=<span class="string">'replace'</span>)</span><br><span class="line">    title=title.split(<span class="string">'/'</span>)[<span class="number">-2</span>]</span><br><span class="line">    url = local(<span class="string">"origin"</span>) + thread[<span class="string">"uri"</span>] + <span class="string">"#isso-%i"</span> % comment[<span class="string">"id"</span>]</span><br><span class="line">    ipaddr = comment[<span class="string">"remote_addr"</span>]</span><br><span class="line">    delete = local(</span><br><span class="line">        <span class="string">"host"</span>) + <span class="string">"/id/%i"</span> % comment[<span class="string">"id"</span>] + <span class="string">"/delete/"</span> + self.isso.sign(</span><br><span class="line">            comment[<span class="string">"id"</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (admin):</span><br><span class="line">        <span class="keyword">return</span> self.manageText.format_map(safesub(vars()))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> self.notifyText.format_map(safesub(vars()))</span><br></pre></td></tr></table></figure>
+<p>需要注意的是，css语法中的<code>{</code>,<code>}</code>与python的模板字符串系列方法冲突，需要写成双大括号来忽略</p>
+<h2 id="尾声"><a class="markdownIt-Anchor" href="#尾声"></a> 尾声</h2>
+<p>到这里ISSO改造算是告一段落了，诸位可以在这里下载源码自行安装<br>
+<a href="https://github.com/oodavy41/isso" target="_blank" rel="noopener">https://github.com/oodavy41/isso</a></p>
+
+      
+    </div>
+
+    
+      
+      
+
+  <div class="post-copyright">
+    <p class="copyright-item">
+      <span>Author: </span>
+      <a href="http://cocolate.cc">cocolate</a>
+    </p>
+    <p class="copyright-item">
+      <span>Link: </span>
+      <a href="http://cocolate.cc/2018/02/24/ISSO评论系统折腾记录/">http://cocolate.cc/2018/02/24/ISSO评论系统折腾记录/</a>
+    </p>
+    <p class="copyright-item">
+      <span>License: </span>
+      
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
+    </p>
+  </div>
+
+
+
+      
+      
+    
+
+    
+      <footer class="post-footer">
+        
+          <div class="post-tags">
+            
+              <a href="/tags/isso/">isso</a>
+            
+              <a href="/tags/Linux/">Linux</a>
+            
+              <a href="/tags/Python/">Python</a>
+            
+          </div>
+        
+        
+        
+  <nav class="post-nav">
+    
+    
+      <a class="next" href="/2017/05/13/记一次canvas粒子特效制作/">
+        <span class="next-text nav-default">记一次canvas粒子特效制作</span>
+        <span class="prev-text nav-mobile">下一篇</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+
+      </footer>
+    
+
+  </article>
+
+
+          </div>
+          
+  <div class="comments" id="comments">
+    
+      <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+      <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+      <style type="text/css">
+        .v *{
+          color: #a6ed8e;
+        }
+        .v .vwrap {
+          border: 0px;
+        }
+        .v .vwrap .vheader .vinput {
+          border-bottom: 1px dashed #a6ed8e;
+        }
+        .v .vwrap .vheader .vinput:focus{
+          border-bottom: 1px dashed #1b3c59;
+        }
+        .v .veditor {
+          min-height: 3.5rem;
+        }
+        .v .vbtn:active, .v .vbtn:hover {
+          color: #a6ed8e;
+          border-color: #a6ed8e;
+          background-color: #1b3c59;
+        }
+        .v .vlist .vcard .vimg{
+          border: 1px dashed #a6ed8e;
+        }
+        .v .vlist .vcard .vhead .vnick{
+          color: #a6ed8e;
+        }
+      </style>
+      <div id="vcomments"></div>
+      <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'e93n5HhEEEjOQnErokxDjoQj-gzGzoHsz',
+            appKey: '5aF6AzpVBq9bBVksDGgWJs1N',
+            notify:true, 
+            verify:false, 
+            avatar:'retro', 
+            placeholder: ' (*・ω・)⊃━  怪雨奇迹、☆'
+        })
+      </script>
+    
+  </div>
+
+
+        </div>
+      </main>
+
+      <footer id="footer" class="footer">
+
+  <div class="avatar">
+    <a href="/about">
+      <img src="/imgs/avatar.png"/>
+      cocolate
+    </a>
+  </div>
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:c@cocolate.cc" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/oodavy41" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="https://weibo.com/3043644997" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://bgm.tv/user/cocolate" class="iconfont icon-bangumi" title="bangumi"></a>
+        
+      
+    
+
+    
+      <a href="/atom.xml" class="iconfont icon-rss" title="rss"></a>
+    
+  </div>
+
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/oodavy41/hexo-theme-sanae">Sanae</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2007 - 
+    
+    2018
+
+    <span class="heart">
+      <i class="iconfont icon-sanae"></i>
+    </span>
+    <span class="author">诹访大社</span>
+  </span>
+</div>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+  
+  
+
+  
+
+
+
+    
+  
+
+
+
+  
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/slideout/slideout.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/pjax/jquery.pjax.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/nprogress/nprogress.min.js"></script>
+  
+
+
+    <script type="text/javascript" src="/js/src/even.js?v=0.233"></script>
+<script type="text/javascript" src="/js/src/nightWithNovae.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  </body>
+</html>
